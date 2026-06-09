@@ -1,5 +1,3 @@
-#ifndef CIRCLE
-#define CIRCLE
 
 #include <iostream>
 #include <fstream>
@@ -60,5 +58,3 @@ int main(int argc, char** argv){
 }
 
 
-
-#endif
