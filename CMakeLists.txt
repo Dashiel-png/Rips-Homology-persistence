@@ -10,7 +10,7 @@ find_package(Boost REQUIRED)
 # Optional: find_package(CGAL REQUIRED)
 
 add_executable(main
-    src/main.cpp
+    src/main.cpp include/Resources/filereaders.cpp
 )
 
 add_executable(generate_circle
@@ -23,6 +23,10 @@ include_directories(main PRIVATE
     ${PROJECT_SOURCE_DIR}/include/Resources
     ${PROJECT_SOURCE_DIR}/include/include
 )
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    add_compile_options(-gdwarf-4)
+endif()
 
 
 

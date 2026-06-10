@@ -142,6 +142,30 @@ generate_circle/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_circle.dir/build.make CMakeFiles/generate_circle.dir/build
 .PHONY : generate_circle/fast
 
+include/Resources/filereaders.o: include/Resources/filereaders.cpp.o
+.PHONY : include/Resources/filereaders.o
+
+# target to build an object file
+include/Resources/filereaders.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/Resources/filereaders.cpp.o
+.PHONY : include/Resources/filereaders.cpp.o
+
+include/Resources/filereaders.i: include/Resources/filereaders.cpp.i
+.PHONY : include/Resources/filereaders.i
+
+# target to preprocess a source file
+include/Resources/filereaders.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/Resources/filereaders.cpp.i
+.PHONY : include/Resources/filereaders.cpp.i
+
+include/Resources/filereaders.s: include/Resources/filereaders.cpp.s
+.PHONY : include/Resources/filereaders.s
+
+# target to generate assembly for a file
+include/Resources/filereaders.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/include/Resources/filereaders.cpp.s
+.PHONY : include/Resources/filereaders.cpp.s
+
 src/Circlegenerator.o: src/Circlegenerator.cpp.o
 .PHONY : src/Circlegenerator.o
 
@@ -200,6 +224,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... generate_circle"
 	@echo "... main"
+	@echo "... include/Resources/filereaders.o"
+	@echo "... include/Resources/filereaders.i"
+	@echo "... include/Resources/filereaders.s"
 	@echo "... src/Circlegenerator.o"
 	@echo "... src/Circlegenerator.i"
 	@echo "... src/Circlegenerator.s"

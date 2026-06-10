@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/dashielbalnaves/Documents/Machine learning C++/GHUDIproj1/Rips-Homology-persistence/main" -I"/Users/dashielbalnaves/Documents/Machine learning C++/GHUDIproj1/Rips-Homology-persistence/PRIVATE" -I/opt/homebrew/include -I"/Users/dashielbalnaves/Documents/Machine learning C++/GHUDIproj1/Rips-Homology-persistence/include/Resources" -I"/Users/dashielbalnaves/Documents/Machine learning C++/GHUDIproj1/Rips-Homology-persistence/include/gudhi-devel/src/common/include"
+CXX_INCLUDES = -I"/Users/dashielbalnaves/Documents/Machine learning C++/GHUDIproj1/Rips-Homology-persistence/main" -I"/Users/dashielbalnaves/Documents/Machine learning C++/GHUDIproj1/Rips-Homology-persistence/PRIVATE" -I/opt/homebrew/include -I"/Users/dashielbalnaves/Documents/Machine learning C++/GHUDIproj1/Rips-Homology-persistence/include/Resources" -I"/Users/dashielbalnaves/Documents/Machine learning C++/GHUDIproj1/Rips-Homology-persistence/include/include"
 
-CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++17 -arch arm64
+CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64
+CXX_FLAGS = -std=gnu++17 -arch arm64
 

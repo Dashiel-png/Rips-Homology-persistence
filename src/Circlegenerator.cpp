@@ -4,15 +4,21 @@
 #include <vector>
 #include <cmath>
 #include <random>
+#include <sstream>
 
 struct Point3{
     double x, y, z;
 };
 
 int main(int argc, char** argv){
-    int nums = argv[1][0];
-    double radius = argv[2][0];
-    double noise = argv[3][0];
+    double nums;
+    double radius;
+    double noise;
+    std::stringstream args;
+    args.str(std::string(argv[1]) + " " + std::string(argv[2]) + " " + argv[3]);
+    args >> nums >> radius >> noise;
+    std::cout << " " << nums << " " << radius<< " " << noise << std::endl;
+
 
     //Random number generator
     std::random_device rd;
@@ -48,7 +54,7 @@ int main(int argc, char** argv){
     filestream << "OFF\n";
     filestream << points.size() << " 0 0\n";
     for(const auto& p : points){
-        filestream << p.x << p.y << p.z << std::endl;
+        filestream << p.x << " " << p.y << " " << p.z << std::endl;
     }
     filestream.close();
     std::cout << "Successfully generated " << points.size() << " points in circle.off" << std::endl;
